@@ -1,5 +1,9 @@
-import '@/styles/globals.css'
+import "../styles/globals.css";
+import Image from "next/image";
+import images from "./images";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;
