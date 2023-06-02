@@ -6,6 +6,7 @@ export const Project = [
     id: 0,
     name: "WhaleTech3D",
     img: img1,
+    demoLink: "https://whaletech3d.shop/",
   },
   {
     id: 1,

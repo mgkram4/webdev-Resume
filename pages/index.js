@@ -1,13 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import images from "./images";
+import images from "../images";
 import Lottie from "lottie-react";
 // import animationData from "./pages/assets/41675-phone-and-email-communication-animation.json";
 import img1 from "./assets/Screenshot 2023-05-24 at 5.39.33 PM.png";
 import { Popover } from "@headlessui/react";
 import ProjectCard from "./productCard";
-import { Project } from "./projects";
+import { Project } from "../projects";
 
 export default function Home() {
   const ref = useRef(null);
@@ -30,25 +30,26 @@ export default function Home() {
   const carousel = useRef();
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  });
+  }, []);
 
   return (
     <div className="">
       {/* HERO */}
       <div className="flex min-h-screen bg-hero bg-no-repeat bg-cover scroll-snap-align-start">
         <div className="flex flex-col justify-center items-center h-screen w-screen">
-          <div className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-4xl p-6  rounded-xl">
-            Hi, I'm&nbsp;
-            <span className="text-[rgba(0,102,255,255)]  transition-all duration-300 hover:text-[rgba(140,200,254,255)]">
+          <div className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-4xl p-6 rounded-xl">
+            Hi, I&apos;m&nbsp;
+            <span className="text-[rgba(0,102,255,255)] transition-all duration-300 hover:text-[rgba(140,200,254,255)]">
               Mark Garcia
             </span>
           </div>
+
           <div className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-xl p-4 m-6  rounded-xl">
             JAMstack Web Developer
           </div>
           <button
             onClick={handleClick}
-            className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-lg p-4 m-4 rounded-xl  transition-transform duration-300 hover:bg-blue-10 hover:text-slate-50 hover:opacity-95 hover:-translate-y-1 hover:shadow-2xl "
+            className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-lg p-4 m-4 rounded-xl transition-transform duration-300 hover:bg-blue-10 hover:text-slate-50 hover:opacity-95 hover:-translate-y-1 hover:shadow-2xl"
           >
             About Me
           </button>
@@ -60,12 +61,14 @@ export default function Home() {
         ref={ref}
         className="flex min-h-screen bg-aboutMe bg-no-repeat bg-cover md:flex-row scroll-snap-align-start"
       >
-        <div className="flex flex-col mx-auto text-center items-center lg:flex-row lg:h-auto max-w-screen-xl w-screen">
+        <div className="flex flex-col mx-auto text-center items-center lg:flex-3">
           <div className="items-center justify-center p-8 lg:flex-3">
-            <img
-              src="./presentationSeta.jpg"
+            <Image
+              src="/presentationSeta.jpg"
               alt=""
               className="rounded-3xl flex-shrink-0 m-auto max-w-3/5 lg:max-w-xl max-h-3/5"
+              width={500}
+              height={500}
             />
           </div>
 
@@ -96,7 +99,7 @@ export default function Home() {
                 Bachelor of Science in E-Commerce
               </div>
               <div className="font-semibold bg-slate-50 w-full md:auto p-4 mt-2 text-sm md:text-base lg:text-lg rounded-md shadow-lg hover:scale-105 hover:shadow-md transition-all">
-                Cetification of Achievment: Systems Engineering
+                Certification of Achievement: Systems Engineering
               </div>
               <div className="font-semibold bg-slate-50 w-full md:auto p-4 mt-2 text-sm md:text-base lg:text-lg rounded-md shadow-lg hover:scale-105 hover:shadow-md transition-all">
                 Computer Science and Computer Engineering: Departmental Honors
@@ -137,6 +140,8 @@ export default function Home() {
                     src={image}
                     alt=""
                     className="w-80 h-10 m-4 pointer-events-auto "
+                    width={320}
+                    height={40}
                   />
                 </motion.div>
               ))}
@@ -152,6 +157,7 @@ export default function Home() {
                   id={Project.id}
                   name={Project.name}
                   img={Project.img}
+                  demoLink={Project.demoLink}
                 />
               ))}
             </div>
@@ -195,7 +201,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center min-h-screen w-screen">
           <div className="bg-slate-100 p-8 rounded-xl py-2">
             <div className="flex font-bold p-4 text-2xl justify-center">
-              Let's Connect!
+              Lets Connect!
             </div>
             <div className="flex flex-col justify-center items-center mt-4">
               <label className="text-xl">Full Name</label>
@@ -220,13 +226,10 @@ export default function Home() {
                 className="border border-gray-300 px-4 py-2 mt-2 rounded"
               ></textarea>
               <button className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-lg p-4 m-2 rounded-xl hover:shadow-lg transition-all duration-200 hover:bg-blue-10 hover:text-slate-50 hover:opacity-90 ">
-                Submit
+                Send Message
               </button>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col justify-center items-center h-screen w-4/5 mr-24">
-          <div className="flex gap-2 w-4/5"></div>
         </div>
       </div>
     </div>

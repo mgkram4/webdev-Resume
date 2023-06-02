@@ -1,9 +1,13 @@
 import { Popover } from "@headlessui/react";
-import { Project } from "pages/projects";
+import { Project } from "/projects";
 import Image from "next/image";
 
 function ProjectCard(props) {
-  const { id, name, img } = props;
+  const { id, name, img, demoLink } = props;
+
+  const handleDemoClick = () => {
+    window.open(demoLink, "_blank");
+  };
 
   // {/* Card
 
@@ -21,7 +25,10 @@ function ProjectCard(props) {
       </div>
       {/* Buttons  */}
       <div className="flex justify-center gap-4 mt-2 ">
-        <button className="w-full rounded-lg bg-slate-300 p-1 shadow-sm hover:-translate-y-0.5 transition-all hover:shadow-2xl border-2 hover:border-slate-700 ">
+        <button
+          onClick={handleDemoClick}
+          className="w-full rounded-lg bg-slate-300 p-1 shadow-sm hover:-translate-y-0.5 transition-all hover:shadow-2xl border-2 hover:border-slate-700 "
+        >
           Demo
         </button>
 
