@@ -13,6 +13,26 @@ export const Project = [
     name: "Personal Portfolio ",
     img: img2,
   },
+  {
+    id: 2,
+    name: "Personal Portfolio ",
+    img: img2,
+  },
+  {
+    id: 3,
+    name: "Personal Portfolio ",
+    img: img2,
+  },
+  {
+    id: 4,
+    name: "Personal Portfolio ",
+    img: img2,
+  },
+  {
+    id: 5,
+    name: "Personal Portfolio ",
+    img: img2,
+  },
 ];
 
 export default Project;

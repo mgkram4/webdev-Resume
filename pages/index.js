@@ -67,8 +67,8 @@ export default function Home() {
               src="/presentationSeta.jpg"
               alt=""
               className="rounded-3xl flex-shrink-0 m-auto max-w-3/5 lg:max-w-xl max-h-3/5"
-              width={500}
-              height={500}
+              width={300}
+              height={300}
             />
           </div>
 
@@ -149,8 +149,8 @@ export default function Home() {
           </motion.div>
 
           <div className="font-semibold m-2"> Projects </div>
-          <div className="flex items-center justify-center bg-slate-50 w-4/5 rounded-md shadow-lg ">
-            <div className="flex">
+          <div className="flex items-center justify-center bg-slate-50 w-4/5 rounded-md shadow-lg overflow-hidden ">
+            <div className="flex flex-wrap justify-center">
               {Project.map((Project) => (
                 <ProjectCard
                   key={Project.id}
@@ -164,32 +164,33 @@ export default function Home() {
           </div>
 
           <div className="font-semibold m-2"> Recommendations </div>
-          <div className="flex gap-2 w-4/5 m-2  ">
-            <div className="font-semibold bg-slate-50 w-2/5 p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg  ">
-              {" "}
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              hic repellendus tempore placeat nesciunt molestiae a dolore
-              ratione, sit temporibus.
-            </div>
-            <div className="font-semibold bg-slate-50 w-2/5 p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg ">
-              {" "}
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              hic repellendus tempore placeat nesciunt molestiae a dolore
-              ratione, sit temporibus.
-            </div>
-            <div className="font-semibold bg-slate-50 w-2/5 p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg ">
-              {" "}
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              hic repellendus tempore placeat nesciunt molestiae a dolore
-              ratione, sit temporibus.
-            </div>
+
+          <div className="font-semibold bg-slate-50  w-full md:w-4/5  p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg  ">
+            {" "}
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic
+            repellendus tempore placeat nesciunt molestiae a dolore ratione, sit
+            temporibus.
           </div>
-          <button
-            onClick={handleClick3}
-            className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-lg p-4 m-2 rounded-xl hover:shadow-lg transition-all duration-200 hover:bg-blue-10 hover:text-slate-50 hover:opacity-90 "
-          >
-            Contact
-          </button>
+          <div className="font-semibold bg-slate-50 w-full md:w-4/5 p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg ">
+            {" "}
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic
+            repellendus tempore placeat nesciunt molestiae a dolore ratione, sit
+            temporibus.
+          </div>
+          <div className="font-semibold bg-slate-50 w-full md:w-4/5 p-4 mt-2 hover:scale-105 hover:shadow-md transition-all rounded-md shadow-lg ">
+            {" "}
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic
+            repellendus tempore placeat nesciunt molestiae a dolore ratione, sit
+            temporibus.
+          </div>
+          <div className="">
+            <button
+              onClick={handleClick3}
+              className="flex justify-center items-center bg-slate-50 shadow-md font-semibold text-lg p-4 m-2 rounded-xl hover:shadow-lg transition-all duration-200 hover:bg-blue-10 hover:text-slate-50 hover:opacity-90 "
+            >
+              Contact
+            </button>
+          </div>
         </div>
       </div>
 
